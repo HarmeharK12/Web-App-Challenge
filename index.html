@@ -12,37 +12,75 @@
         <p>Track your daily habits and stay productive!</p>
     </header>
 
-    <main>
-        <section id="habit-list">
-            <h2>Your Habits</h2>
-            <ul id="habits">
-                <!-- Predefined habits -->
-                <li>
-                    <input type="checkbox" class="habit-checkbox">
-                    <span>Drink 8 glasses of water</span>
-                    <button class="delete-btn">Delete</button>
-                </li>
-                <li>
-                    <input type="checkbox" class="habit-checkbox">
-                    <span>Exercise for 30 minutes</span>
-                    <button class="delete-btn">Delete</button>
-                </li>
-                <li>
-                    <input type="checkbox" class="habit-checkbox">
-                    <span>Read for 20 minutes</span>
-                    <button class="delete-btn">Delete</button>
-                </li>
-            </ul>
-        </section>
+    <div id="welcome-banner">
+        <p class="welcome-line welcome-line-1">Welcome to</p>
+        <p class="welcome-line welcome-line-2">Habit Tracker</p>
+        <p class="welcome-quote">“Small habits make a big difference every day.”</p>
+    </div>
 
-        <section id="add-habit">
-            <h2>Add a New Habit</h2>
-            <form id="habit-form">
-                <label for="new-habit">New Habit:</label>
-                <input type="text" id="new-habit" placeholder="Enter a new habit">
-                <button type="submit">Add Habit</button>
-            </form>
-        </section>
+    <aside id="chatbox">
+        <div class="chat-header">
+            <span>Habit Helper</span>
+            <span class="chat-status">online</span>
+        </div>
+        <div class="chat-message">
+            These are some of my habits: Drink water, exercise, read for 20 minutes. Would you like to continue with these basic ones?
+        </div>
+        <div class="chat-actions">
+            <button class="chat-btn">Yes, keep them</button>
+            <button class="chat-btn secondary">Customize</button>
+        </div>
+    </aside>
+
+    <main>
+        <div id="main-grid">
+            <section id="habit-panel">
+                <section id="habit-list">
+                    <h2>Your Habits</h2>
+                    <ul id="habits">
+                        <!-- Predefined habits -->
+                        <li>
+                            <input type="checkbox" class="habit-checkbox">
+                            <span>Drink 8 glasses of water</span>
+                            <button class="delete-btn">Delete</button>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="habit-checkbox">
+                            <span>Exercise for 30 minutes</span>
+                            <button class="delete-btn">Delete</button>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="habit-checkbox">
+                            <span>Read for 20 minutes</span>
+                            <button class="delete-btn">Delete</button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="add-habit">
+                    <h2>Add a New Habit</h2>
+                    <form id="habit-form">
+                        <label for="new-habit">New Habit:</label>
+                        <input type="text" id="new-habit" placeholder="Enter a new habit">
+                        <button type="submit">Add Habit</button>
+                    </form>
+                </section>
+            </section>
+
+            <aside id="instructions">
+                <h2>Instructions</h2>
+                <p>Add your new daily habits and check them off when complete.</p>
+                <p class="instruction-example"><strong>Example:</strong> Drink water, exercise, read a chapter.</p>
+                <div class="instruction-card">
+                    <h3>How to start</h3>
+                    <ol>
+                        <li>Type a habit in the box.</li>
+                        <li>Click Add Habit.</li>
+                        <li>Mark it complete when done.</li>
+                    </ol>
+                </div>
+            </aside>
+        </div>
     </main>
 
     <footer>
