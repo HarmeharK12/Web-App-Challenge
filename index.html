@@ -40,10 +40,52 @@
                 <section id="add-habit">
                     <h2>Add a New Habit</h2>
                     <form id="habit-form">
-                        <label for="new-habit">New Habit:</label>
-                        <input type="text" id="new-habit" placeholder="Enter a new habit">
-                        <button type="submit">Add Habit</button>
+                        <div class="form-group">
+                            <label for="new-habit">Habit Name:</label>
+                            <input type="text" id="new-habit" placeholder="e.g., Morning Yoga" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="habit-time">Reminder Time:</label>
+                            <input type="time" id="habit-time">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="habit-frequency">Repeat Frequency:</label>
+                            <select id="habit-frequency">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="hourly">Hourly</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="custom-frequency-group" style="display: none;">
+                            <label for="habit-custom-days">Every (days/hours):</label>
+                            <input type="number" id="habit-custom-days" min="1" placeholder="Enter number">
+                            <select id="habit-custom-unit">
+                                <option value="hour">Hour(s)</option>
+                                <option value="day">Day(s)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="habit-category">Category:</label>
+                            <div class="category-input-group">
+                                <select id="habit-category">
+                                    <option value="">Select or create category...</option>
+                                </select>
+                                <button type="button" id="add-category-btn" class="add-category-btn">+</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Add Habit</button>
                     </form>
+                </section>
+
+                <section id="categories-section" style="display: none;">
+                    <h2>Manage Categories</h2>
+                    <div id="categories-list"></div>
                 </section>
             </section>
 
@@ -64,7 +106,7 @@
     </main>
 
     <footer>
-        <p>Habit Tracker App - Debug and Improve Me!</p>
+        <p>✨ Habit Tracker App - Build better habits, one day at a time</p>
     </footer>
 
     <script src="script.js"></script>
