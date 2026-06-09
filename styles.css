@@ -200,11 +200,24 @@ button:hover {
     color: #246533;
 }
 
-.chat-status {
-    font-size: 0.8rem;
-    color: #4CAF50;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+    background: none;
 }
 
 .chat-message {

@@ -2,6 +2,39 @@
 const habitList = document.getElementById('habits');
 const habitForm = document.getElementById('habit-form');
 const newHabitInput = document.getElementById('new-habit');
+const yesBtn = document.getElementById('yes-btn');
+const customizeBtn = document.getElementById('customize-btn');
+const closeBtn = document.getElementById('close-chat');
+const chatbox = document.getElementById('chatbox');
+
+// Predefined habits
+const predefinedHabits = [
+    'Drink 8 glasses of water',
+    'Exercise for 30 minutes',
+    'Read for 20 minutes'
+];
+
+// Function to add a habit to the list
+function addHabitToList(habitText) {
+    const li = document.createElement('li');
+    li.innerHTML = `
+        <input type="checkbox" class="habit-checkbox">
+        <span>${habitText}</span>
+        <button class="delete-btn">Delete</button>
+    `;
+    habitList.appendChild(li);
+}
+
+// Add event listener for "Yes, keep them" button
+yesBtn.addEventListener('click', function() {
+    predefinedHabits.forEach(habit => addHabitToList(habit));
+    chatbox.style.display = 'none';
+});
+
+// Add event listener for close button
+closeBtn.addEventListener('click', function() {
+    chatbox.style.display = 'none';
+});
 
 // Add event listener for adding a new habit
 habitForm.addEventListener('submit', function(e) {
@@ -13,14 +46,8 @@ habitForm.addEventListener('submit', function(e) {
         return;
     }
 
-    // Create new habit item (BUG: Missing functionality here)
-    const li = document.createElement('li');
-    li.innerHTML = `
-        <input type="checkbox" class="habit-checkbox">
-        <span>${newHabit}</span>
-        <button class="delete-btn">Delete</button>
-    `;
-    habitList.appendChild(li);
+    // Create new habit item
+    addHabitToList(newHabit);
 
     // Clear input field (BUG: This doesn't work)
     newHabitInput.value = '';

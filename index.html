@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Habit Tracker</h1>
-        <p>Track your daily habits and stay productive!</p>
-    </header>
-
     <div id="welcome-banner">
         <p class="welcome-line welcome-line-1">Welcome to</p>
         <p class="welcome-line welcome-line-2">Habit Tracker</p>
@@ -21,14 +16,14 @@
     <aside id="chatbox">
         <div class="chat-header">
             <span>Habit Helper</span>
-            <span class="chat-status">online</span>
+            <button id="close-chat" class="close-btn">×</button>
         </div>
         <div class="chat-message">
             These are some of my habits: Drink water, exercise, read for 20 minutes. Would you like to continue with these basic ones?
         </div>
         <div class="chat-actions">
-            <button class="chat-btn">Yes, keep them</button>
-            <button class="chat-btn secondary">Customize</button>
+            <button class="chat-btn" id="yes-btn">Yes, keep them</button>
+            <button class="chat-btn secondary" id="customize-btn">Customize</button>
         </div>
     </aside>
 
@@ -38,22 +33,7 @@
                 <section id="habit-list">
                     <h2>Your Habits</h2>
                     <ul id="habits">
-                        <!-- Predefined habits -->
-                        <li>
-                            <input type="checkbox" class="habit-checkbox">
-                            <span>Drink 8 glasses of water</span>
-                            <button class="delete-btn">Delete</button>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="habit-checkbox">
-                            <span>Exercise for 30 minutes</span>
-                            <button class="delete-btn">Delete</button>
-                        </li>
-                        <li>
-                            <input type="checkbox" class="habit-checkbox">
-                            <span>Read for 20 minutes</span>
-                            <button class="delete-btn">Delete</button>
-                        </li>
+                        <!-- Habits will be added here -->
                     </ul>
                 </section>
 
